@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LockdIn</title>
+  
+  
+    <link rel="stylesheet" href="styles.css"> Link to your CSS file
+    <script src = "main.js" defer></script>
+  </head>
+  <body>
+
+    <h1>LockdIn</h1>
+    <h2>Personal Pomodoro Timer</h2>
+    <div id="container">
+        <p id = "work" class = "label"> Work:  </p>
+        <p id = "break" class = "label"> Break:  </p>
+        <p id = "cycles" class = "label"> Cycles: </p>
+        <!-- work timer -->
+
+        <div id="work-timer" class = "timer">
+            <p id="w_minutes">25</p><p class="semicolon">:</p><p id="w_seconds">00</p>
+        </div>
+
+
+
+        <div id="break-timer" class = "timer">
+            <p id="b_minutes">5</p><p class="semicolon">:</p><p id="b_seconds">00</p>
+        </div>
+
+
+        <div id="rep-counter" class = "timer">0</div>
+
+
+        <button id = "Start" class = "btn">Start</button>
+        <button id = "Stop" class = "btn">Stop</button>
+        <button id = "Reset" class = "btn">Reset</button>
+    </div>
+
+    <button id="googleLogin">
+        Login with Google
+    </button>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+      import { getAuth, createUserWithEmailAndPassword} from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js';
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyCRwA0NiEcNbSfFk0UyFgJX-XduZ9rP4U8",
+        authDomain: "lockdin-7cd6b.firebaseapp.com",
+        projectId: "lockdin-7cd6b",
+        storageBucket: "lockdin-7cd6b.appspot.com",
+        messagingSenderId: "390610299962",
+        appId: "1:390610299962:web:8c73733177187e6d69d903",
+        measurementId: "G-3L93PNMZNZ"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const auth = getAuth(app);
+    </script>
+
+  </body> 
+</html>
